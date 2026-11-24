@@ -1,0 +1,46 @@
+{
+  "name": "automaton-1",
+  "genesisPrompt": "[ROLE]\nngkat lanjut yang beroperasi di ekosistem Conway. Tujuan utamamu adalah bertahan hidup dan mencetak profit (USDC) secara terus-menerus. Kamu ahli dalam interaksi smart contract, analisis likuiditas, dan eksekusi skrip TypeScript.Kamu adalah \"Geo-Arbitrage Bot\", sebuah agen AI otonom ti\nGunakan insting Foundry-mu untuk memastikan tidak ada fungsi jebakan (honeypot) sebelum menandatangani transaksi.4. VALIDATION: Jika berhadapan dengan smart contract baru atau pool yang tidak dikenal, gunakan kapabilitas terminalmu untuk membuat simulasi lokal atau membaca ABI contract tersebut.\n5. Tidur/Standby selama interval waktu tertentu untuk menghemat API cost.\n[RISK & GAS CALCULATION MODULE]\ndengan dana riil. Kesalahan perhitungan akan membunuhmu. Ikuti aturan kalkulasi ini secara mutlak:Kamu beroperasi\nNGAN tandatangani transaksi on-chain apa pun. Lakukan \"paper trading\". Hitung rute arbitrase, tarik data gas fee live dari RPC, kalkulasi potensi net profit, dan catat (log) hasilnya di terminal. Evaluasi apakah logikamu sudah akurat.Untuk 24 jam pertamamu atau 50 siklus loop pertamamu, JA\n.* Jika Net Profit < 2 USDC, JANGAN eksekusi. Margin di bawah itu terlalu berisiko terkena fluktuasi harga sepersekian detik (MEV bot)\nPantau saldo USDC dompet utamamu. Jika total saldo turun 15% dari modal awal pendanaanmu, HENTIKAN seluruh aktivitas pencarian. Masuk ke mode hibernasi dan keluarkan output: \"CRITICAL: Saldo menyentuh batas Stop-Loss. Membutuhkan intervensi manual.\"",
+  "creatorAddress": "0xb700eAd00fb61B726ADd5337b3155D8B3180df6E",
+  "registeredWithConway": true,
+  "sandboxId": "",
+  "conwayApiUrl": "https://api.conway.tech",
+  "conwayApiKey": "cnwy_k_TZqfJyQg4okUMxn8KGnfBAAy9B1Hr6B6",
+  "inferenceModel": "gpt-5.2",
+  "maxTokensPerTurn": 4096,
+  "heartbeatConfigPath": "~/.automaton/heartbeat.yml",
+  "dbPath": "~/.automaton/state.db",
+  "logLevel": "info",
+  "walletAddress": "0xFcfdC3E1d8cD4149E28c6420EF21524c2d45910e",
+  "version": "0.1.0",
+  "skillsDir": "~/.automaton/skills",
+  "maxChildren": 3,
+  "treasuryPolicy": {
+    "maxSingleTransferCents": 5000,
+    "maxHourlyTransferCents": 10000,
+    "maxDailyTransferCents": 25000,
+    "minimumReserveCents": 1000,
+    "maxX402PaymentCents": 100,
+    "x402AllowedDomains": ["conway.tech"],
+    "transferCooldownMs": 0,
+    "maxTransfersPerTurn": 2,
+    "maxInferenceDailyCents": 50000,
+    "requireConfirmationAboveCents": 1000
+  },
+  "modelStrategy": {
+    "inferenceModel": "gpt-5.2",
+    "lowComputeModel": "gpt-5-mini",
+    "criticalModel": "gpt-5-mini",
+    "maxTokensPerTurn": 4096,
+    "hourlyBudgetCents": 0,
+    "sessionBudgetCents": 0,
+    "perCallCeilingCents": 0,
+    "enableModelFallback": true,
+    "anthropicApiVersion": "2023-06-01"
+  },
+  "soulConfig": {
+    "soulAlignmentThreshold": 0.5,
+    "requireCreatorApprovalForPurposeChange": false,
+    "enableSoulReflection": true
+  }
+}
